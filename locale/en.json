@@ -1,0 +1,6 @@
+{
+  "meta": {
+    "title": "Session deleter",
+    "description": "Permanently deletes a conversation from its row menu and cleans up its session log, projection cache, and workspace accounting."
+  }
+}

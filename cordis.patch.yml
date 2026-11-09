@@ -1,0 +1,4 @@
+# dsh bundle patch: inserts this plugin into the profile's layer stack.
+- insert:
+    - id: session-deleter
+      name: '@local/dsh-session-deleter'
