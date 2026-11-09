@@ -19,15 +19,28 @@
 
 ## 安装
 
-这是一个 DSH profile bundle（同时包含 Host 与 Client 半边）。
+本插件是 DSH profile bundle（同时包含 Host 与 Client 半边）。**安装一次即可在该 profile 的所有工作区/项目中使用**，不需要按项目重复安装。
 
-方式一（推荐，插件管理器）：把本目录放到任意位置，然后通过 DSH 的 `plugin_manager` 安装该目录的绝对路径（安装后 bundle 会写入当前 profile）。
-
-方式二（命令行）：
+### 方式一：从 GitHub 安装（推荐给其他使用者）
 
 ```bash
+dsh plugin --profile <profile> add github:lhphub/dsh-session-deleter
+```
+
+也可以在 dsh-market 中通过 GitHub 源 `lhphub/dsh-session-deleter` 安装；或者由 DSH 的 `plugin_manager` 使用 `github:lhphub/dsh-session-deleter` 作为安装 spec。
+
+### 方式二：本地目录（开发/自用）
+
+```bash
+git clone https://github.com/lhphub/dsh-session-deleter
 dsh plugin --profile <profile> add link:/absolute/path/to/dsh-session-deleter
 ```
+
+也可以把本目录交给 DSH 的 `plugin_manager`，安装该目录的绝对路径。
+
+### 其他 profile
+
+不同 profile 相互独立：在哪个 profile 安装，该 profile 下的所有项目就都能用。若你有多个 profile，需要在每个 profile 中安装一次。
 
 安装后在会话行菜单即可看到「删除会话」。如果菜单没有立即出现，重新加载 DSH 界面即可；插件本身不需要重启 DSH 才能启用。
 

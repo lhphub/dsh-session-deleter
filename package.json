@@ -1,7 +1,6 @@
 {
-  "name": "@local/dsh-session-deleter",
-  "version": "1.0.0",
-  "private": true,
+  "name": "dsh-session-deleter",
+  "version": "1.1.0",
   "type": "module",
   "description": "Permanently deletes a conversation from its row menu and cleans up its log, projection cache, and workspace accounting.",
   "exports": {
@@ -39,5 +38,12 @@
   "bugs": {
     "url": "https://github.com/lhphub/dsh-session-deleter/issues"
   },
-  "author": "lhphub"
+  "author": "lhphub",
+  "keywords": [
+    "dsh",
+    "dsh-plugin",
+    "deepseek-harness",
+    "session",
+    "delete"
+  ]
 }

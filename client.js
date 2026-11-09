@@ -1,5 +1,5 @@
 window.__ModuleLoader__.load({
-  id: '@local/dsh-session-deleter',
+  id: 'dsh-session-deleter',
   factory(require) {
     const React = require('react')
     const h = React.createElement
