@@ -367,6 +367,9 @@ window.__ModuleLoader__.load({
                 role: 'dialog',
                 'aria-modal': 'true',
                 'aria-labelledby': 'dsd-title',
+                // macOS Desktop (DSH >= 0.2.2-rc.1) only treats marked window
+                // regions as no-drag; declare the visible overlay explicitly.
+                'data-window-drag-exclude': '',
               },
               h('style', { key: 'style' }, STYLE),
               h(

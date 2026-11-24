@@ -67,7 +67,13 @@ dsh plugin --profile <profile> add link:/absolute/path/to/dsh-session-deleter
 
 ## 兼容性
 
-在 DSH `0.2.2-rc.1`（macOS 桌面版）测试。依赖 DSH 的 `contextMenus`、`sessionPersistence`、`workspaceRegistry`、`storageDomain` 与 `connection.fetch` 接口。
+- 当前测试环境：DSH **0.2.3-alpha.2**（macOS 桌面版）。
+- `engines.dsh`：`>=0.2.2-rc.1 <0.3.0 || >=0.2.3-alpha.0 <0.3.0`，覆盖 0.2.2-rc.1 起至 0.2.x（含 0.2.3 预发布）。
+- 已按 0.2.2-rc.1 → 0.2.3-alpha.2 的升级项核对：
+  - 路由认证迁移（rc.2）：仍通过 Connection 的已认证 exact Fetch 路由注册，未直接注册 WebServer 路由；
+  - macOS 自定义浮层窗口区域（rc.1）：确认框已声明 `data-window-drag-exclude`；
+  - Session 头部槽位迁移、`sessionQuery.inspectSession` 移除等变更与本插件无关（本插件不依赖这些接口）。
+- 依赖 DSH 的 `contextMenus`、`sessionPersistence`、`workspaceRegistry`、`storageDomain`、`sessionQuery.readTitle` 与 `connection.fetch` 接口。
 
 ## 目录结构
 
